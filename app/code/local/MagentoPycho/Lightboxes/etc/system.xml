@@ -1,0 +1,599 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   MagentoPycho
+ * @package    MagentoPycho_Lightboxes
+ * @author     magepsycho@gmail.com
+ * @website    http://www.magepsycho.com
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <tabs>
+        <magepychoall translate="label" module="lightboxes">
+            <label>MagePsycho Extensions</label>
+            <sort_order>400</sort_order>
+        </magepychoall>
+    </tabs>
+    <sections>
+        <magepychoinfo translate="label" module="lightboxes">
+			<label>Info</label>
+			<tab>magepychoall</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>99999999999</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+                <info>
+                    <frontend_model>lightboxes/system_config_info</frontend_model>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </info>
+			</groups>
+		</magepychoinfo>
+        <lightboxes module="lightboxes">
+            <label>jQuery LightBoxes</label>
+            <tab>magepychoall</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>400</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <option translate="label">
+                    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <lightbox_type translate="label">
+                            <label>Lightbox Type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_lightboxtypes</source_model>
+                            <sort_order>30</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<comment><![CDATA[You can customize the settings of selected Lightbox Type from the below tabs.]]></comment>
+                        </lightbox_type>
+                        <mainimage_size translate="label">
+                            <label>Main Image Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>31</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Size in [Width]x[Height] Format. Example: 265x265]]></comment>
+                        </mainimage_size>
+                        <thumbnail_size translate="label">
+                            <label>Thumbnail Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>32</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Size in [Width]x[Height] Format. Example: 57x57]]></comment>
+                        </thumbnail_size>
+                        <popupimage_size translate="label">
+                            <label>Popup Image Size</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>33</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Size in [Width]x[Height] Format. Example: 800x600]]></comment>
+                        </popupimage_size>
+                        <disable_zoombar translate="label">
+                            <label>Disable Zoom Bar</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>34</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[This will hide the default Zoom bar and will give main image the lightbox effect.]]></comment>
+                        </disable_zoombar>
+                    </fields>
+                </option>
+
+				<lightboxes_confliction translate="label">
+                    <label>JS File Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>15</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<info>
+                            <frontend_model>lightboxes/config_lightboxes_confliction</frontend_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </info>
+                        <include_jquery translate="label">
+                            <label>Include jQuery file</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[You can disable the jQuery inclusion if it's already included.<br />Default: Yes]]></comment>
+                        </include_jquery>
+						<include_jquery_from translate="label">
+                            <label>Include jQuery file from</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_jquerytypes</source_model>
+                            <sort_order>25</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends><include_jquery>1</include_jquery></depends>
+                            <comment><![CDATA[You can use Google CDN if your site goes live as this will decrease the load time for jQuery. If you are using Google CDN option when you are in localhost, make sure to check the internet connection.  <br />Default: Local]]></comment>
+                        </include_jquery_from>
+						<include_jquery_in translate="label">
+                            <label>Include jQuery file in</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_inclusiontypes</source_model>
+                            <sort_order>30</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends><include_jquery>1</include_jquery></depends>
+                            <comment><![CDATA[Default: Head.<br/>Note that jQuery.noConflict() is included implicitly]]></comment>
+                        </include_jquery_in>
+						<include_lighboxes_in translate="label">
+                            <label>Include Lightbox files in</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_inclusiontypes</source_model>
+                            <sort_order>40</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Default: Head]]></comment>
+                        </include_lighboxes_in>
+						<include_globally translate="label">
+                            <label>Include Lightbox files globally</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>45</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends><include_lighboxes_in>head</include_lighboxes_in></depends>
+                            <comment><![CDATA[If 'Yes' option is selected, then it will include the lightbox files (js + css) so that it can be used outside of product description page also. For example: CMS Pages/Static Blocks, 3rd party modules like Image Gallery etc.<br />Default: No<br /><strong>Note:</strong> Make sure to check that Lightbox files are included in Head in order to make it work globally.]]></comment>
+                        </include_globally>
+						<global_initialization_code translate="label">
+                            <label>Lightbox initialization code for global usage</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>48</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends><include_globally>1</include_globally></depends>
+                            <comment><![CDATA[This field becomes handy when you are using lightbox files globally. You can initialize any no of any type of lightbox  here, <strong>For Example:</strong><br />
+   &nbsp;&nbsp;jQuery("a[rel=iframeFancybox]").fancybox({<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;'type'    : 'iframe',<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;'width'    : 800,<br />
+   &nbsp;&nbsp;&nbsp;&nbsp;'height'   : 600<br />
+    });<br />and can simply call from your custom pages, cms pages, static blocks etc easily.<br /> <strong>Note</strong> You don't need to wrap the code within &lt;script&gt; tag & document ready code: jQuery(document).ready(function(){ code.]]></comment>
+                        </global_initialization_code>
+						<include_initialization_in translate="label">
+                            <label>Include Lightbox initialization code in</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_inclusiontypes</source_model>
+                            <sort_order>50</sort_order><show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Default: Media]]></comment>
+                        </include_initialization_in>
+
+                    </fields>
+                </lightboxes_confliction>
+
+                <fancybox translate="label">
+                    <label>FancyBox</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <info>
+                            <frontend_model>lightboxes/config_fancybox_info</frontend_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </info>
+                        <padding translate="label">
+                            <label>padding</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Space between FancyBox wrapper and content.]]></comment>
+                        </padding>
+                        <margin translate="label">
+                            <label>margin</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Space between viewport and FancyBox wrapper.]]></comment>
+                        </margin>
+                        <opacity translate="label">
+                            <label>opacity</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>41</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[When true, transparency of content is changed for elastic transitions.]]></comment>
+                        </opacity>
+                        <modal translate="label">
+                            <label>modal</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[When true, 'overlayShow' is set to 'true' and 'hideOnOverlayClick', 'hideOnContentClick', 'enableEscapeButton', 'showCloseButton' are set to 'false'.]]></comment>
+                        </modal>
+                        <cyclic translate="label">
+                            <label>cyclic</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[When true, galleries will be cyclic, allowing you to keep pressing next/back.]]></comment>
+                        </cyclic>
+                        <scrolling translate="label">
+                            <label>scrolling</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_fancybox_scrollings</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Set the overflow CSS property to create or hide scrollbars. Can be set to 'auto', 'yes', or 'no']]></comment>
+                        </scrolling>
+                        <autoScale translate="label">
+                            <label>autoScale</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If true, FancyBox is scaled to fit in viewport]]></comment>
+                        </autoScale>
+                        <centerOnScroll translate="label">
+                            <label>centerOnScroll</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[When true, FancyBox is centered while scrolling page.]]></comment>
+                        </centerOnScroll>
+                        <hideOnOverlayClick translate="label">
+                            <label>hideOnOverlayClick</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Toggle if clicking the overlay should close FancyBox]]></comment>
+                        </hideOnOverlayClick>
+                        <hideOnContentClick translate="label">
+                            <label>hideOnContentClick</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Toggle if clicking the content should close FancyBox]]></comment>
+                        </hideOnContentClick>
+                        <overlayShow translate="label">
+                            <label>overlayShow</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Toggle overlay]]></comment>
+                        </overlayShow>
+                        <overlayOpacity translate="label">
+                            <label>overlayOpacity</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_fancybox_opacities</source_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Opacity of the overlay (from 0 to 1; default - 0.3)]]></comment>
+                        </overlayOpacity>
+                        <overlayColor translate="label">
+                            <label>overlayColor</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Color of the overlay]]></comment>
+                        </overlayColor>
+                        <titleShow translate="label">
+                            <label>titleShow</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Toggle title]]></comment>
+                        </titleShow>
+                        <titlePosition translate="label">
+                            <label>titlePosition</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_fancybox_titlepositions</source_model>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[The position of title. Can be set to 'outside', 'inside' or 'over']]></comment>
+                        </titlePosition>
+                        <transitionIn translate="label">
+                            <label>transitionIn</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_fancybox_transitions</source_model>
+                            <sort_order>170</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[The transition type. Can be set to 'elastic', 'fade' or 'none']]></comment>
+                        </transitionIn>
+                        <transitionOut translate="label">
+                            <label>transitionOut</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_fancybox_transitions</source_model>
+                            <sort_order>180</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[The transition type. Can be set to 'elastic', 'fade' or 'none']]></comment>
+                        </transitionOut>
+                        <speedIn translate="label">
+                            <label>speedIn</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>190</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Speed of the fade and elastic transitions, in milliseconds]]></comment>
+                        </speedIn>
+                        <speedOut translate="label">
+                            <label>speedOut</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Speed of the fade and elastic transitions, in milliseconds]]></comment>
+                        </speedOut>
+                        <changeFade translate="label">
+                            <label>changeFade</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_fancybox_speeds</source_model>
+                            <sort_order>210</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Speed of the content fading while changing gallery items]]></comment>
+                        </changeFade>
+                        <easingIn translate="label">
+                            <label>easingIn</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_fancybox_easings</source_model>
+                            <sort_order>220</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Easing used for elastic animations]]></comment>
+                        </easingIn>
+                        <easingOut translate="label">
+                            <label>easingOut</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_fancybox_easings</source_model>
+                            <sort_order>230</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Easing used for elastic animations]]></comment>
+                        </easingOut>
+                        <showCloseButton translate="label">
+                            <label>showCloseButton</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>240</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Toggle close button]]></comment>
+                        </showCloseButton>
+                        <showNavArrows translate="label">
+                            <label>showNavArrows</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>250</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Toggle navigation arrows]]></comment>
+                        </showNavArrows>
+                        <enableEscapeButton translate="label">
+                            <label>enableEscapeButton</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>250</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Toggle if pressing Esc button closes FancyBox]]></comment>
+                        </enableEscapeButton>
+                    </fields>
+                </fancybox>
+                <pirobox>
+                    <label>PiroBox</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>300</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <info>
+                            <frontend_model>lightboxes/config_pirobox_info</frontend_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </info>
+                        <theme translate="label">
+                            <label>theme</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_pirobox_themes</source_model>
+                            <sort_order>309</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Available themes for PiroBox]]></comment>
+                        </theme>
+                        <my_speed translate="label">
+                            <label>my_speed</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>310</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[animation speed]]></comment>
+                        </my_speed>
+                        <bg_alpha translate="label">
+                            <label>bg_alpha</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_pirobox_bgalphas</source_model>
+                            <sort_order>320</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[background opacity]]></comment>
+                        </bg_alpha>
+                        <slideShow translate="label">
+                            <label>slideShow</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>330</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[true == slideshow on, false == slideshow off]]></comment>
+                        </slideShow>
+                        <slideSpeed translate="label">
+                            <label>slideSpeed</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>340</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[slideshow duration in seconds(3 to 6 Recommended)]]></comment>
+                        </slideSpeed>
+                    </fields>
+                </pirobox>
+                <lightboxclone>
+                    <label>Lightbox Clone</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>400</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <info>
+                            <frontend_model>lightboxes/config_lightboxclone_info</frontend_model>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </info>
+                        <overlayBgColor translate="label">
+                            <label>overlayBgColor</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>410</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Used to define the overlay background color. #000 (black) is default.]]></comment>
+                        </overlayBgColor>
+                        <overlayOpacity translate="label">
+                            <label>overlayOpacity</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>lightboxes/config_lightboxclone_opacities</source_model>
+                            <sort_order>420</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Used to define the overlay opacity. 0.8 is default.]]></comment>
+                        </overlayOpacity>
+                        <containerBorderSize translate="label">
+                            <label>containerBorderSize</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>430</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[The padding CSS information used in the container image box. 10 is default.]]></comment>
+                        </containerBorderSize>
+                        <containerResizeSpeed translate="label">
+                            <label>containerResizeSpeed</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>440</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[The duration of resize effect in the container image box. 400 is default.]]></comment>
+                        </containerResizeSpeed>
+                        <txtImage translate="label">
+                            <label>txtImage</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>450</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Text "Image" used in the image caption.]]></comment>
+                        </txtImage>
+                        <txtOf translate="label">
+                            <label>txtOf</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>460</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Text "of" used in the image caption.]]></comment>
+                        </txtOf>
+                    </fields>
+                </lightboxclone>
+            </groups>
+        </lightboxes>
+    </sections>
+</config>
