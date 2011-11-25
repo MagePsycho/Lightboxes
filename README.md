@@ -33,10 +33,10 @@ System >> Configuration >> MagePsycho Extensions >> jQuery LightBoxes >> Manage 
 
 --------------------------------------------------------
 Example:
---------------------------------------------------------
 
-General Settings
 --------------------------------------------------------
+General Settings
+
 Enabled			= Yes
 Lightbox Type		= Fancybox
 Main Image Size		= Default: 265x265	
@@ -44,8 +44,9 @@ Thumbnail Size		= Default: 57x57
 Popup Image Size	= Default: full size
 Disable Zoom Bar	= Yes
 
-JS File Settings
 --------------------------------------------------------
+JS File Settings
+
 Include jQuery file 			= Yes
 Include jQuery file in			= Head
 Include lightbox files in 		= Head
