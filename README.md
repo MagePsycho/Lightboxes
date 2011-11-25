@@ -30,6 +30,7 @@ Note: This will not override the 'app' folder of your Magento installation but n
 Attention!! Be sure to logout & re-login before configuration else you will get '404 Error (Page not found)' in System > Configuration Page.
 1> After installation go to Admin:
 System >> Configuration >> MagePsycho Extensions >> jQuery LightBoxes >> Manage your setting here.
+
 --------------------------------------------------------
 Example:
 --------------------------------------------------------
